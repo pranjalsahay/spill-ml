@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#080c15] text-slate-100 font-sans antialiased selection:bg-cyan-500/30 selection:text-cyan-200;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080c15;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Engineering grid background (Cadence aesthetic) */
+.compiler-grid {
+  background-image: 
+    linear-gradient(to right, rgba(29, 44, 71, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(29, 44, 71, 0.2) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Subtle dot mesh */
+.compiler-dots {
+  background-image: radial-gradient(rgba(29, 44, 71, 0.45) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Lenis smooth scrolling rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

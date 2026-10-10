@@ -7,3 +7,12 @@ data/ir_unroll/
 data/csv/
 data/dataset.csv
 data/dataset_raw.csv
+
+# Frontend
+node_modules/
+frontend/node_modules/
+.npm
+.DS_Store
+*.local
+.vscode/
+.idea/
